@@ -29,17 +29,17 @@ We use environment variables to manage configuration and secrets. You'll find a 
 
 - Copy the `.env_sample` file and rename it to `.env`:
 
-  ```bash
-  cp .env_sample .env
-  ```
+    ```bash
+    cp .env_sample .env
+    ```
 
 - Open the `.env` file and replace all placeholder values with your actual data. For example:
 
-```plaintext
-ENV_NAME="YOUR_ENV_NAME"
-BASE_URL="http://127.0.0.1:8000"
-DB_URL="sqlite:///./shortener.db"
-```
+    ```plaintext
+    ENV_NAME="YOUR_ENV_NAME"
+    BASE_URL="http://127.0.0.1:8000"
+    DB_URL="sqlite:///./shortener.db"
+    ```
 
 ### 4. Start the Application
 
