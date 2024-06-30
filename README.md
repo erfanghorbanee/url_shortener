@@ -46,7 +46,7 @@ We use environment variables to manage configuration and secrets. You'll find a 
 Once you have configured your environment variables, you can start the application by running:
 
 ```bash
-
+uvicorn shortener_app.main:app --reload
 ```
 
 Your application should now be running on `http://localhost:8000`.
