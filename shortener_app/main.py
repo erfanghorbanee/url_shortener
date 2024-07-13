@@ -3,7 +3,7 @@ from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from . import models, schemas, crud
+from . import crud, models, schemas
 from .database import SessionLocal, engine
 
 app = FastAPI()
@@ -48,10 +48,8 @@ def create_url(url: schemas.URLBase, db: Session = Depends(get_db)):
 
 @app.get("/{url_key}")
 def forward_to_target_url(
-        url_key: str,
-        request: Request,
-        db: Session = Depends(get_db)
-    ):
+    url_key: str, request: Request, db: Session = Depends(get_db)
+):
     if db_url := crud.get_db_url_by_key(db=db, url_key=url_key):
         return RedirectResponse(db_url.target_url)
     else:
