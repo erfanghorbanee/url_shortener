@@ -1,5 +1,7 @@
 # URL_SHORTENER
 
+This project is a URL shortener application built with FastAPI. It allows users to shorten long URLs, and manage them through a set of administrative endpoints, and forward to the original URLs.
+
 ## Getting Started
 
 Follow these steps to set up your environment:
@@ -50,6 +52,16 @@ uvicorn shortener_app.main:app --reload
 ```
 
 Your application should now be running on `http://localhost:8000`.
+
+## Endpoints
+
+| Endpoint             | HTTP Verb | Request Body       | Action                                                      |
+|----------------------|-----------|--------------------|-------------------------------------------------------------|
+| /                    | GET       |                    | Returns a `Hello, World!` string                             |
+| /url                 | POST      | Your target URL    | Shows the created `url_key` with additional info, including a `secret_key` |
+| /{url_key}           | GET       |                    | Forwards to your target URL                                  |
+| /admin/{secret_key}  | GET       |                    | Shows administrative info about your shortened URL           |
+| /admin/{secret_key}  | DELETE    | Your secret key    | Deletes your shortened URL                                   |
 
 ## Contributing
 
