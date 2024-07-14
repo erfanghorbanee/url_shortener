@@ -54,3 +54,13 @@ Your application should now be running on `http://localhost:8000`.
 ## Contributing
 
 If you have suggestions or issues, please open an issue through GitHub. All contributions are welcomed.
+
+## TODO
+
+- Custom URL key: Let your users create custom URL keys instead of a random string.
+- Peek URL: Create an endpoint for your users to check which target URL is behind a shortened URL.
+- Graceful Forward: Check if the website exists before forwarding.
+
+## Acknowledgements
+
+This project was inspired by and built upon the tutorial from [Real Python](https://realpython.com/). For more details, you can check out the original tutorial [here](https://realpython.com/build-a-python-url-shortener-with-fastapi/).
